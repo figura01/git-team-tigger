@@ -1,17 +1,38 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&family=Raleway:wght@400;700;900&display=swap');
 * {
     box-sizing: border-box;
 }
 
+
 a {
     text-decoration: none;
     color: black;
+    transition: all 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin:0;
+    padding:0;
 }
 
 html {
     background-color: #eeff41;
     font-family: 'Raleway';
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p10-bottom {
+    padding-bottom: 10px;
+}
+.p20-bottom {
+    padding-bottom: 20px;
 }
 
 .navigation {
@@ -21,12 +42,45 @@ html {
     background-color: white;
     width: 100%;
     height: 60px;
-
-    box-shadow: 0 5px 10px rgba(0,0,0, 0.5)
+    z-index: 9999;
+    
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
 }
 
 .header, section {
     height: 100vh;
+}
+
+.header-content {
+    background-color: rgba(0,0,0,0.1);
+    padding: 20px;
+    position: relative;
+    width: 50%;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.header-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.header-footer {
+    position: absolute;
+    left: 0;
+    bottom:10px;
+    height:200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tiger-1, .tiger-2 {
+    width:30%;
 }
 
 .brand {
@@ -35,11 +89,32 @@ html {
     text-transform: capitalize;
 }
 
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left:0;
+    background-color: rgba(0,0,0, 0.95);
+    color: white
+}
+
 .btn-link {
     background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
-    font-size: 20px 
+    font-size: 20px; 
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0,0,0, 0.5);
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+
+.btn-link:hover {
+    color: white;
+    background-color: black;
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 8px rgba(0,0,0, 0.2);
+    transition: all 0.3s;
 }
 
 .center {
@@ -47,9 +122,11 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
 #ailie {
     border: 1px solid orange;
-    width:  50%;
+
     display: flex;
     align-items: center;
     font-size: 20px;
@@ -68,3 +145,10 @@ html {
     width: 50%;
     text-align: center;
 }
+
+@media (min-width: 575.98px) {
+    article {
+        width: 50% !important;
+    }
+}
+
