@@ -106,7 +106,7 @@ section:nth-of-type(odd) {
     padding: 20px;
     position: relative;
     width: 80%;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
 }
 
 .header-content h1 {
@@ -156,15 +156,15 @@ section:nth-of-type(odd) {
 }
 
 .tiger-1 {
-    width: 50%;
-    left: 0px;
-    bottom: -15px;
+    width: 55%;
+    left: -2%;
+    bottom: -20px;
 }
 
 .tiger-2 {
-    width: 55%;
-    right: -00px;
-    bottom: -20px;
+    width: 60%;
+    right: -2%;
+    bottom: -30px;
 }
 
 .brand {
@@ -359,7 +359,7 @@ form label {
         left: 50%;
         transform: translateX(-50%);
         bottom: -35px;
-        width: 130%;
+        width: 115%;
         z-index: -1;
         height: 50px;
         background: radial-gradient(closest-side, rgba(0, 0, 0, 0.8), transparent);
