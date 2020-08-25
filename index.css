@@ -226,7 +226,7 @@ section:nth-of-type(odd) {
 
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .big {
