@@ -339,10 +339,11 @@ form label {
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     article {
-        width: 45% !important;
+        width: 42% !important;
         margin: 20px !important;
     }
 
