@@ -1,9 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&family=Raleway:wght@400;700;900&display=swap');
+/*** GENERAL STYLE ***/
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&family=Raleway:wght@400;700;900&display=swap");
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
 
 a {
     text-decoration: none;
@@ -11,18 +12,11 @@ a {
     transition: all 0.3s;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    margin:0;
-    padding:0;
+body {
+    background-color: #eeff41;
+    font-family: "Raleway";
 }
 
-html {
-    background-color: #eeff41;
-    font-family: 'Raleway';
-}
 
 .text-center {
     text-align: center;
@@ -35,6 +29,60 @@ html {
     padding-bottom: 20px;
 }
 
+.btn-link {
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+
+.btn-link:hover {
+    color: white;
+    background-color: black;
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 100vh;
+}
+
+.header,
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+section:nth-of-type(odd) {
+    background-color: rgba(0,0,0,0.05); 
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/*** NAVIGATION ***/
 .navigation {
     position: fixed;
     top: 0;
@@ -43,39 +91,39 @@ html {
     width: 100%;
     height: 60px;
     z-index: 9999;
-    
-    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.header, section {
-    height: 100vh;
-    padding-top:80px;
-    text-align: center;
+/*** HEADER ***/
+
+.header {
+    padding: 40px 0;
 }
 
 .header-content {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
-    width: 45%;
-    padding-bottom: 100px;
+    width: 80%;
+    padding-bottom: 80px;
 }
 
 .header-content h1 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 900;
 }
 
 .header-content h2 {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .header-footer {
     position: absolute;
     left: 0;
-    bottom:10px;
-    height:200px;
+    bottom: 10px;
+    height: 200px;
 
     display: flex;
     align-items: center;
@@ -86,79 +134,91 @@ html {
     position: absolute;
     width: 100%;
     bottom: 0;
+    left:0;
 }
 
 .tigers::after {
-  
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -35px;
-    width: 800px;
+    bottom: -25px;
+    width: 120%;
     z-index: -1;
     height: 50px;
-    background: radial-gradient(closest-side, rgba(0,0,0,0.8), transparent );
+    background: radial-gradient(closest-side, rgba(0, 0, 0, 0.8), transparent);
 }
 
-.tiger-1, .tiger-2 {
-    width:50%;
+.tiger-1,
+.tiger-2 {
     position: absolute;
 }
 
 .tiger-1 {
-    left:10px;
-    bottom: -35px;
+    width: 50%;
+    left: 0px;
+    bottom: -15px;
 }
 
 .tiger-2 {
     width: 55%;
-    right: -50px;
-    bottom: -50px;
+    right: -00px;
+    bottom: -20px;
 }
 
 .brand {
-    font-family: 'Grenze Gotisch';
+    font-family: "Grenze Gotisch";
     font-size: 32px;
     text-transform: capitalize;
 }
 
+/*** FOOTER ***/
 .footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    left:0;
-    background-color: rgba(0,0,0, 0.95);
-    color: white
-}
-
-.btn-link {
-    position: relative;
-    z-index: 100;
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 20px; 
-    display: inline-block;
-    box-shadow: 2px 2px 5px rgba(0,0,0, 0.5);
-    transform: translateY(0);
-    transition: all 0.3s;
-}
-
-.btn-link:hover {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
     color: white;
-    background-color: black;
-    transform: translateY(-5px);
-    box-shadow: 10px 10px 8px rgba(0,0,0, 0.2);
-    transition: all 0.3s;
 }
 
-.center {
+/*** SECTION ABOUT ***/
+
+#about .card {
+    width: 100%;
+}
+
+#about article {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 20px 0;
+}
+
+#about article img {
+    width: 200px !important;
+    height: 200px !important;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+#about article h3 {
+    font-size: 20px;
+    margin-bottom: 20px
+}
+#about article h3 span{
+    display: block;
+    font-size: 32px;
+    margin-bottom: 0px
+}
+
+#about article p {
+    margin-bottom:20px;
 }
 
 #ailie {
@@ -175,7 +235,7 @@ html {
 }
 
 #ailie-photo {
-    width:  50%;
+    width: 50%;
 }
 
 .card {
@@ -207,10 +267,118 @@ form label {
     font-size: 20px;
 }
 
-
-@media (min-width: 575.98px) {
-    article {
-        width: 50% !important;
-    }
+#laurent,
+#ailie {
+    border: 1px solid orange;
+    padding: 40px 20px;
 }
 
+#laurent span {
+    color: orange;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#laurent img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#laurent .card {
+    width: 100%;
+}
+
+.footer {
+    padding: 15px 10px;
+}
+
+@media (min-width: 575.98px) {
+
+    .btn-link {
+        position: relative;
+        z-index: 100;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 20px;
+        display: inline-block;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        transform: translateY(0);
+        transition: all 0.3s;
+    }
+    
+    .btn-link:hover {
+        color: white;
+        background-color: black;
+        transform: translateY(-5px);
+        box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+    }
+
+    .header-content {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        position: relative;
+        width: 80%;
+        padding-bottom: 250px;
+    }
+    
+    .header-content h1 {
+        font-size: 48px;
+        font-weight: 900;
+    }
+    
+    .header-content h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px
+    }
+
+    .articles {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+
+    article {
+        width: 45% !important;
+        margin: 20px !important;
+    }
+
+    .tigers {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .tigers::after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -35px;
+        width: 130%;
+        z-index: -1;
+        height: 50px;
+        background: radial-gradient(closest-side, rgba(0, 0, 0, 0.8), transparent);
+    }
+
+    .tiger-1,
+    .tiger-2 {
+        width: 50%;
+        position: absolute;
+    }
+
+    .tiger-1 {
+        left: 10px;
+        bottom: -50px;
+    }
+
+    .tiger-2 {
+        width: 55%;
+        right: -50px;
+        bottom: -100px;
+    }
+}
